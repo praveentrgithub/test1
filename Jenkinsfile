@@ -1,5 +1,5 @@
 pipeline {
-agent { label 'jenkinsfile' }
+agent any
 
   stages {
     stage ('BUILD') {
