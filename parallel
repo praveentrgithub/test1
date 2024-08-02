@@ -1,12 +1,9 @@
 pipeline {
   agent any
-  
-  
-    stages {
+      stages {
       stage ( 'BUILD' ) {
         steps {
         echo " this is BUIILD stage "
-        
         sh '''
         sleep 5
         exit 0
