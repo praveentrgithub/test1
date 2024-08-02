@@ -1,19 +1,28 @@
 pipeline {
   agent any
-  environment {
-  NAME = "PRAVEEN" }
+    parameters { 
+   string defaultValue: 'XYZ', name: 'ABC'
+   choice choices: ['main', 'master'], name: 'BRANCH'
+}
+
+  environment { 
+     DEPLOY_BRANCH= "$BRANCH"
+     DEPLOY_ABC = "$ABC"  
+     NAME = "PRAVEEN" }
     stages {
       stage ( 'BUILD' ) {
         steps {
         echo " this is BUIILD stage "
-        echo params.ABC
+        echo " deploy to ${params.ABC}"
+        echo " deploy to ${params.BRANCH} "
         sh '''
         sleep 5
         echo $NAME
-        
+      echo " deploy to ${RANCH}
+      echo " deploy to ${ABC}
         exit 0
-        
-       }   '''
+           '''
+       } 
       }
   }    
 
