@@ -18,7 +18,7 @@ pipeline {
         sh '''
         sleep 5
         echo $NAME
-      echo " deploy to ${RANCH}
+      echo " deploy to ${BRANCH}
       echo " deploy to ${ABC}
         exit 0
            '''
