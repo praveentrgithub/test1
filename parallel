@@ -10,6 +10,7 @@ pipeline {
         sh '''
         sleep 5
         echo $NAME
+        echo params.ABC
         exit 0
         
        }   '''
