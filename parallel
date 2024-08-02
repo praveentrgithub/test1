@@ -9,8 +9,9 @@ pipeline {
         echo "$NAME"
         sh '''
         sleep 5
-        exit 0
         echo $NAME
+        exit 0
+        
        }   '''
       }
   }    
