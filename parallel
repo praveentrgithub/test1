@@ -6,11 +6,11 @@ pipeline {
       stage ( 'BUILD' ) {
         steps {
         echo " this is BUIILD stage "
-
+        echo params.ABC
         sh '''
         sleep 5
         echo $NAME
-        echo params.ABC
+        
         exit 0
         
        }   '''
