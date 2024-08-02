@@ -1,10 +1,7 @@
 pipeline {
   agent any
   
-  environment { 
-     NAME = "PRAVEEN"  
-}
-
+  
     stages {
       stage ( 'BUILD' ) {
         steps {
@@ -12,7 +9,6 @@ pipeline {
         
         sh '''
         sleep 5
-        echo $NAME
         exit 0
            '''
        } 
